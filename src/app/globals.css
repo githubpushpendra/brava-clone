@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  /* background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
+    background-color: white;
+}
+
+/* NavBar.css */
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: 80px;
+  background-color: rgb(55, 53, 53);
+  align-items: center;
+  font-size: small;
+  position: fixed;
+  z-index: 1000;
+  color: white;
+}
+
+.horizontal-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 43px;
+}
+
+.brava {
+  margin: 155px;
+  font-size:xx-large;
+  font-family: 'Calligraffitti', cursive;
+  cursor: pointer;
+  color: yellow;
+  text-shadow: 3px 3px black;
+}
+
+.horizontal-list li {
+  margin: 10px; 
+}
+
+
+
+/* Screen CSS */
+
+.screen {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.transition-image {
+  transition: opacity 1s ease-in-out;
+  /* max-width: 100%; Ensure the image doesn't exceed its container width */
+  height: auto; /* Maintain the aspect ratio of the image */
+} 
+.arrow-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.arrow-button:focus {
+  outline: none;
+}
+
+/* .exTeax {
+  position: absolute;
+  font-size: x-large;
+  
+} */
+
+
+/* Card CSS */
+.aCard {
+  background-color: black;
+  width: 300px;
+  border-radius: 80px 10px 10px 80px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.image {
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+}
+
+.secondC {
+  justify-content: center;
+  align-items: center;
+  padding-left: 60px;
+}
+.tb {
+  margin-left: 60px;
+}
+.aTitle {
+  color: white;
+  padding-bottom: 15px;
+
+}
+
+.aLink {
+  padding-top: 10px;
+  color: white;
+}
+#linkId {
+  color: white;
+}
+
+.marquee {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/* Hover CSS */
+
+.hoverColor {
+  position: relative;
+  color: white; 
+  text-decoration: none; 
+
+  transition: color 0.7s ease, text-decoration 0.7s ease;
+}
+
+.hoverColor:hover {
+  color: rgb(195, 195, 9); 
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Drawer CSS */
+
+.drawer {
+  position: absolute;
+  top: 100%; /* Position it below the triggering element */
+  left: 0;
+  width: 200px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: none; /* Initially hide the drawer */
+}
+
+.brands:hover + .drawer {
+  display: block;
+  background-color: rgb(55, 53, 53);
+  padding: 20px;
+  margin-left: 30px;
+  border-color: rgb(55, 53, 53);
+}
+
+
+.shopDrawerComponent {
+  position: absolute;
+  top: 100%; /* Position it below the triggering element */
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: rgb(55, 53, 53);
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-color: rgb(55, 53, 53);
+  display: none; /* Initially hide the drawer */
+}
+
+.shop:hover + .shopDrawerComponent{
+  display: block;
+}
+
+/* Text style overlay */
+
+
