@@ -91,13 +91,8 @@ body {
 }
 .arrow-button:focus {
   outline: none;
-}
 
-/* .exTeax {
-  position: absolute;
-  font-size: x-large;
-  
-} */
+}
 
 
 /* Card CSS */
@@ -162,28 +157,37 @@ body {
 
 .drawer {
   position: absolute;
-  top: 100%; /* Position it below the triggering element */
+  top: 100%; 
   left: 0;
   width: 200px;
   padding: 10px;
   background-color: #fff;
   border: 1px solid #ccc;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  display: none; /* Initially hide the drawer */
+  display: none; 
+  z-index: 100;
 }
 
-.brands:hover + .drawer {
+.drawerWrapper {
+  position: relative;
+}
+
+.drawerWrapper:hover .drawer {
   display: block;
   background-color: rgb(55, 53, 53);
   padding: 20px;
-  margin-left: 30px;
+  /* margin-left: 30px; */
   border-color: rgb(55, 53, 53);
 }
 
+/* .drawerWrapperShop {
+  position: relative;
+} */
 
 .shopDrawerComponent {
   position: absolute;
-  top: 100%; /* Position it below the triggering element */
+  padding: 20px;
+  top: 100%; 
   left: 0;
   width: 100%;
   height: auto;
@@ -191,13 +195,48 @@ body {
   border: 1px solid #ccc;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-color: rgb(55, 53, 53);
-  display: none; /* Initially hide the drawer */
+  display: none;
+
 }
 
-.shop:hover + .shopDrawerComponent{
+.shopDrawerComponent td {
+  margin-right: 100px;
+  padding-right: 120px;
+  padding-left: 120px;
+}
+
+.drawerWrapperShop:hover .shopDrawerComponent{
   display: block;
 }
 
-/* Text style overlay */
+/* Responsiveness */
 
+/* @media (max-width: 768px) {
+  .navBar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
 
+  .navBar li {
+    display: none;
+  }
+
+  .horizontal-list {
+    margin: 10px;
+  }
+
+  .brava {
+    margin: 10px;
+  }
+
+  .horizontal-list li {
+    margin: 5px;
+  }
+
+  .drawerWrapper,
+  .drawerWrapperShop {
+    margin-bottom: 10px;
+  }
+
+} */

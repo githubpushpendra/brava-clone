@@ -19,20 +19,6 @@ export default function Card(props) {
                   textlink
                 </a>
               </div>
-              {/* <table className='tb'>
-                <tbody >
-                  <tr >
-                    <td className='aTitle'>amazing</td>
-                  </tr>
-                  <tr>
-                    <td className='aLink'>
-                      <a href="example.com" target="_blank" rel="noopener noreferrer">
-                        textLink
-                      </a>
-                    </td>
-                  </tr>
-                </tbody>
-              </table> */}
             </th>
           </tr>
         </tbody>

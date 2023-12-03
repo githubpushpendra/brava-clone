@@ -4,22 +4,26 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel'; 
 
 export default function Screen() {
+  
   const images = [
-    "https://t4.ftcdn.net/jpg/04/37/68/41/360_F_437684167_PfMo7xJwQPik8dAgM01lR0LO1NpiZ8fo.jpg",
-    "https://t4.ftcdn.net/jpg/04/37/68/41/360_F_437684167_PfMo7xJwQPik8dAgM01lR0LO1NpiZ8fo.jpg",
-    "https://t4.ftcdn.net/jpg/04/37/68/41/360_F_437684167_PfMo7xJwQPik8dAgM01lR0LO1NpiZ8fo.jpg"
+    "https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg",
+    "https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   ]
 
   const textStyle = {
     position: 'absolute',
-    top: '50%',
-    left: '40%',
+    display: 'flex',
+    top: '40%',
+    left: '50%',
     transform: 'translate(-50%, -50%)',
     color: 'white', 
-    fontSize: '50px', 
+    fontSize: '100px', 
     fontWeight: 'bold', 
-    textAlign: 'right',
-    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)', // Add text shadow
+    textAlign: 'centre',
+    textShadow: '2px 2px 4px rgba(10, 10, 10, 10)', // Add text shadow
+    fontStyle: 'italic',
+    fontFamily: 'fantasy', 
   };
 
   const carouselSettings = {
@@ -33,18 +37,14 @@ export default function Screen() {
   return (
     <div> 
       <Carousel {...carouselSettings}> 
-          <div> 
-              <img src={images[0]} alt="image1"/>
+        {
+          images.map((image, index)=>(
+            <div key={index}> 
+              <img src={image} alt="image"/>
               <div style={textStyle}>This is an example text</div>
-          </div> 
-          <div> 
-              <img src={images[1]} alt="image2" /> 
-              <div style={textStyle}>This is an example text</div>
-          </div> 
-          <div> 
-              <img src={images[2]} alt="image3"/> 
-              <div style={textStyle}>This is an example text</div>
-          </div> 
+            </div> 
+          ))
+        }
       </Carousel> 
     </div> 
   )

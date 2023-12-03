@@ -7,14 +7,14 @@ export default function NavBar() {
   return (
     <div className='navBar'>
       <ul className="horizontal-list">
-        <li>
+        <li className='drawerWrapper'>
           <span className="hoverColor brands">brands</span>
           <BrandDrawer />
-          </li>
-        <li>
+        </li>
+        <li className='drawerWrapperShop'>
           <span className="hoverColor shop">shop</span>
           <ShopDrawer />
-          </li>
+        </li>
         <li><span className="hoverColor">premium</span></li>
         <li><span className="hoverColor">gift cards</span></li>
       </ul>
@@ -22,7 +22,7 @@ export default function NavBar() {
         <li>brava</li>
       </ul>
       <ul className="horizontal-list">
-        <li><span class="hoverColor">become an affiliate</span></li>
+        <li><span className="hoverColor">become an affiliate</span></li>
         <li><i className="bi bi-twitter hoverColor"></i></li>
         <li><i className="bi bi-tiktok hoverColor"></i></li>
         <li><i className="bi bi-instagram hoverColor"></i></li>
